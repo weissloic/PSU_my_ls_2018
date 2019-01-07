@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2019
+** Project Name
+** File description:
+** [file description here]
+*/
+
 #include <stdio.h>
 #include <dirent.h>
 #include <string.h>
@@ -12,7 +19,7 @@ int main(int ac, char **av)
     int j = 0;
 
     struct dirent *ent;
-    struct stat buf;
+    //struct stat buf;
     dir = opendir (av[1]);
     if (dir != NULL) {
     while ((ent = readdir (dir)) != NULL) {

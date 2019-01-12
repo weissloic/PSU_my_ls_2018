@@ -2,8 +2,13 @@ CC	=	gcc
 CFLAGS = -I/include/ -L./lib/my -lmy -g
 
 SRC_TEST = 	test.c \
-			my_strcat.c
+			my_strcat.c \
+			hidden.c \
+			ls_basic.c \
+			malloc.c \
+			tool_l.c
 			
+
 
 OBJ_TEST = $(SRC_TEST:.c=.o)
 	

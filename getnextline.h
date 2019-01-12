@@ -16,6 +16,8 @@
 #include <pwd.h>
 #include <string.h>
 #include <grp.h>
+#include <errno.h>
+
 
 
 
@@ -26,9 +28,11 @@ typedef struct func_char_t {
     char **changedate;
     char **date_final;
     char **t_flag;
+    char **stock_my_folder;
     struct stat buf;
     struct dirent *ent;
     int nb_files;
+    int nb_folder;
     DIR *dir;
     int blocks_size;
 } func_char_t;

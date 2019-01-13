@@ -5,6 +5,8 @@
 ** my_strcat
 */
 
+#include "include/my.h"
+
 char *my_strcat(char *dest, char const *src)
 {
     int co = 0;

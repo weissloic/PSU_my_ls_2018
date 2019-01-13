@@ -29,10 +29,12 @@ typedef struct func_char_t {
     char **date_final;
     char **t_flag;
     char **stock_my_folder;
+    char **stock_folder;
     struct stat buf;
     struct dirent *ent;
     int nb_files;
     int nb_folder;
     DIR *dir;
     int blocks_size;
+    int number;
 } func_char_t;

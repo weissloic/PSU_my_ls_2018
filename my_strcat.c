@@ -25,30 +25,28 @@ char *my_strcat(char *dest, char const *src)
 
 char *my_strcpy(char *dest, char *src)
 {
-  int   i;
+    int   i;
 
-  i = 0;
-  while (src[i] != '\0')
-    {
-      dest[i] = src[i];
-      i = i + 1;
+    i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i = i + 1;
     }
-  dest[i] = '\0';
-  return (dest);
+    dest[i] = '\0';
+    return (dest);
 }
 
 char *my_strncpy(char *dest, char *src, int n)
 {
-  int i;
+    int i;
 
-  i = 0;
-  while (n > 0 && *(src + i))
-    {
-      *(dest + i) = *(src + i);
-      i++;
-      n--;
+    i = 0;
+    while (n > 0 && *(src + i)) {
+        *(dest + i) = *(src + i);
+        i++;
+        n--;
     }
-  if (n > 0)
-    *(dest + i) = '\0';
-  return (dest);
+    if (n > 0)
+        *(dest + i) = '\0';
+    return (dest);
 }

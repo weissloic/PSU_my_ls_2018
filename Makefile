@@ -7,6 +7,7 @@ SRC_TEST = 	test.c \
 			ls_basic.c \
 			malloc.c \
 			tool_l.c \
+			my_l.c \
 		   	lib/my/adresspointer.c \
 			lib/my/base.c \
 			lib/my/printfunc.c \

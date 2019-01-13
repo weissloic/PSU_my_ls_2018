@@ -66,6 +66,33 @@ void my_putadress_pointer1(va_list ap);
 void my_putpercentage1(va_list ap);
 void my_u_put_nbr1(va_list ap);
 void func_put_stroctal1(va_list ap);
+void open_function_ls(int ac, char **av, func_char_t *func_char_t, int k);
+void open_file_hidden_complete(int ac, char **av,
+    func_char_t *func_char_t, int i);
+int my_open_file_hidden(int ac, char **av, func_char_t *func_char_t, int i);
+int my_ls_hidden(int ac, char **av, func_char_t *func_char_t);
+void my_open_file_basic_complete(int ac, char **av, func_char_t *func_char_t);
+int my_open_file_basic(int ac, char **av, func_char_t *func_char_t);
+int my_ls_basic_oneav(int ac, char **av, func_char_t *func_char_t);
+int my_ls_basic_twoav(int ac, char **av, func_char_t *func_char_t);
+int my_ls_basic(int ac, char **av, func_char_t *func_char_t);
+void my_struct(func_char_t *func_char_t);
+void my_struct_two(func_char_t *func_char_t);
+int my_ls_la_flag(int ac, char **av, func_char_t *func_char_t);
+int my_ls_l_flag(int ac, char **av, func_char_t *func_char_t);
+int my_ls_lone_flag(int ac, char **av, func_char_t *func_char_t);
+void print_l(func_char_t *func_char_t, int k, int i);
+void my_open_file_complete(int ac, char **av, func_char_t *func_char_t, int i);
+char *my_strcat(char *dest, char const *src);
+
+char *my_strncpy(char *dest, char *src, int n);
+int my_open_file(int ac, char **av, func_char_t *func_char_t, int i);
+void cat_my_path(func_char_t *func_char_t, int ac, char **av);
+void my_two_condition(func_char_t *func_char_t, int ac, char **av, int i);
+void my_condition(func_char_t *func_char_t, int ac, char **av, int i);
+int my_strcmp(char *s1, char *s2);
+void print_my_stick_bit(struct stat buf);
+int print_my_guid(struct stat buf);
 
 static void (*point_func[12])(va_list ap) = {
     &my_putcharacter1,

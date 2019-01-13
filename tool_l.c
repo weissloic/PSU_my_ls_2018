@@ -19,15 +19,8 @@ int print_my_guid(struct stat buf)
 }
 
 void print_my_stick_bit(struct stat buf)
-{   
-    if (S_ISCHR(buf.st_mode) == 1)
-        my_printf("c");
-    else if (S_ISDIR(buf.st_mode) == 1)
-        my_printf("d");
-    else if (S_ISSOCK(buf.st_mode) != 0)
-        my_printf("s");
-    else
-        my_printf("-");
+{
+    my_printf((S_ISDIR(buf.st_mode)) ? "d" : "-");
     my_printf((buf.st_mode & S_IRUSR) ? "r" : "-");
     my_printf((buf.st_mode & S_IWUSR) ? "w" : "-");
     my_printf((buf.st_mode & S_IXUSR) ? "x" : "-");
@@ -39,14 +32,12 @@ void print_my_stick_bit(struct stat buf)
     my_printf((buf.st_mode & S_IXOTH) ? "x" : "-");
 }
 
-int         my_strcmp(char *s1, char *s2)
+int my_strcmp(char *s1, char *s2)
 {
-  int           i;
+    int i = 0;
 
-  i = 0;
-  while ((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
-    {
-      i++;
+    while ((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0')) {
+        i++;
     }
-  return (s1[i] - s2[i]);
+    return (s1[i] - s2[i]);
 }
